@@ -37,8 +37,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     var startHP = true;
 
-    //var combo1 = ["dR", "upR"];
-    var combo1 = ["down"];
+    var combo1 = ["dR", "upR"];
     var c1 = false;
     var combo2 = ["dL", "right", "upL"];
     var c2 = false;
