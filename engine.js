@@ -123,6 +123,7 @@
     function draw()
     {
         canvas.width = canvas.width; //clears the canvas
+
         context.drawImage(background, background.X, background.Y, background.width, background.height);
         context.drawImage(character, character.X, character.Y, character.width, character.height);
         if (startHP)
@@ -151,6 +152,8 @@
             context.drawImage(highHP, highHP.X, highHP.Y, highHP.width, highHP.height);
             context.drawImage(potionGlow, potionGlow.X, potionGlow.Y, potionGlow.width, potionGlow.height);
         }
+        context.font = "30px Arial";
+        context.fillText("V. 0.8",800,50);
     }
     function update()
     {
