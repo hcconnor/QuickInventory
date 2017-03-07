@@ -33,14 +33,6 @@
     // Hide method from for-in loops
     Object.defineProperty(Array.prototype, "equals", {enumerable: false});
 
-    // var downD = false;
-    // var downU = false;
-    // var upL = false;
-    // var upR = false;
-    // var up = false;
-    // var down = false;
-    // var right = false;
-    // var left = false;
 
     var combo1 = ["right", "up"];
 
@@ -72,13 +64,44 @@
         }
         else if(angle < 20 && angle > - 20) {
             timerStart = true;
-            actions.push("right")
+            actions.push("right");
             console.log("right");
             timer = 0;
-        } else if(angle < 90) {
-        //DOWN-RIGHT SWIPE...
-        } else {
-            //DOWN-LEFT SWIPE...
+        }
+        else if(angle > 100 && angle < 170) {
+            //DOWN-left SWIPE...
+            timerStart = true;
+            actions.push("dL");
+            console.log("Down Left");
+            timer = 0;
+        }
+        else if(angle < -20 && angle > -170) {
+            //Up-right SWIPE...
+            timerStart = true;
+            actions.push("upR");
+            console.log("Up Right");
+            timer = 0;
+        }
+        else if(angle < -170 && angle > -190) {
+            //left SWIPE...
+            timerStart = true;
+            actions.push("left");
+            console.log("left");
+            timer = 0;
+        }
+        else if(angle > 80 && angle < 100){
+            //DOWN...
+            timerStart = true;
+            actions.push("down");
+            console.log("down");
+            timer = 0;
+        }
+        else {
+            //down-right SWIPE...
+            timerStart = true;
+            actions.push("dR");
+            console.log("Down Right");
+            timer = 0;
         }
         });
 
@@ -100,6 +123,10 @@
             if (actions.equals(combo1))
             {
                 console.log("combo complete");
+            }
+            if (actions.equals())
+            {
+
             }
             console.log("reset");
             resetDirections();
