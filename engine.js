@@ -93,7 +93,7 @@
             console.log("Up Right");
             timer = 0;
         }
-        else if(angle < -170 && angle > -190) {
+        else if(angle < -170 && angle > -200) {
             //left SWIPE...
             timerStart = true;
             actions.push("left");
