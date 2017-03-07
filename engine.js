@@ -57,7 +57,9 @@
 // create a simple instance
 // by default, it only adds horizontal recognizers
     var options = {
-        preventDefault: true
+        preventDefault: true,
+        dragLockToAxis: true,
+        dragBlockHorizontal: true
     };
     var mc = new Hammer(QuickInventory, options);
 
@@ -153,7 +155,7 @@
             context.drawImage(potionGlow, potionGlow.X, potionGlow.Y, potionGlow.width, potionGlow.height);
         }
         context.font = "30px Arial";
-        context.fillText("V. 0.8",800,50);
+        context.fillText("V. 0.81",800,50);
     }
     function update()
     {
