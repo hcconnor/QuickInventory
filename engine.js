@@ -4,6 +4,7 @@
     var myElement = document.getElementById('myElement');
 
 
+
     // Warn if overriding existing method
     if(Array.prototype.equals)
         console.warn("Overriding existing Array.prototype.equals. Possible causes: New API defines the method, there's a framework conflict or you've got double inclusions in your code.");
@@ -58,6 +59,7 @@
     var mc = new Hammer(QuickInventory);
 
 // listen to events...
+    mc.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
     mc.get("swipe").set({threshold: 100, direction: Hammer.DIRECTION_ALL });
     mc.on("swipe", function(eventObject) {
         var angle = eventObject.angle;
