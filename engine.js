@@ -45,7 +45,7 @@
     var c3 = false;
     var combo4 = ["upR", "upR", "upR", "dR"];
     var c4 = false;
-    var combo5 = ["down", "dR", "left", "upR"];
+    var combo5 = ["down", "down", "down", "down"];
     var c5 = false;
 
     var timer = 0;
@@ -155,7 +155,7 @@
             context.drawImage(potionGlow, potionGlow.X, potionGlow.Y, potionGlow.width, potionGlow.height);
         }
         context.font = "30px Arial";
-        context.fillText("V. 0.82",800,50);
+        context.fillText("V. 0.83",800,50);
     }
     function update()
     {
