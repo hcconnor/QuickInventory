@@ -155,7 +155,7 @@
             context.drawImage(potionGlow, potionGlow.X, potionGlow.Y, potionGlow.width, potionGlow.height);
         }
         context.font = "30px Arial";
-        context.fillText("V. 0.85",800,50);
+        context.fillText("V. 0.86",800,50);
     }
     function update()
     {
@@ -163,7 +163,7 @@
         {
             timer++;
         }
-        if (timer > 30)
+        if (timer > 15)
         {
             timer = 0;
             timerStart = false;
