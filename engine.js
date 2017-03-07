@@ -155,7 +155,7 @@
             context.drawImage(potionGlow, potionGlow.X, potionGlow.Y, potionGlow.width, potionGlow.height);
         }
         context.font = "30px Arial";
-        context.fillText("V. 0.84",800,50);
+        context.fillText("V. 0.85",800,50);
     }
     function update()
     {
