@@ -114,7 +114,7 @@
             timer = 0;
         }
         else {
-            left
+            //left
             timerStart = true;
             actions.push("left");
             console.log("left");
