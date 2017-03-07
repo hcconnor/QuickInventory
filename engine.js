@@ -56,10 +56,12 @@
 
 // create a simple instance
 // by default, it only adds horizontal recognizers
-    var mc = new Hammer(QuickInventory);
+    var options = {
+        preventDefault: true
+    };
+    var mc = new Hammer(QuickInventory, options);
 
 // listen to events...
-    mc.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
     mc.get("swipe").set({threshold: 100, direction: Hammer.DIRECTION_ALL });
     mc.on("swipe", function(eventObject) {
         var angle = eventObject.angle;
