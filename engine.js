@@ -45,7 +45,7 @@
     var c3 = false;
     var combo4 = ["upR", "upR", "upR", "dR"];
     var c4 = false;
-    var combo5 = ["left", "left", "left", "left"];
+    var combo5 = ["down", "dR", "left", "upR"];
     var c5 = false;
 
     var timer = 0;
