@@ -67,13 +67,13 @@
     mc.get("swipe").set({threshold: 100, direction: Hammer.DIRECTION_ALL });
     mc.on("swipe", function(eventObject) {
         var angle = eventObject.angle;
-        if(angle < -100 && angle > -170) {
+        if(angle < -110 && angle > -170) {
             timerStart = true;
             actions.push("upL")
             console.log("UPL");
             timer = 0;
         }
-        else if (angle < -80 && angle > -100) {
+        else if (angle < -80 && angle > -110) {
             timerStart = true;
             actions.push("up")
             console.log("UP");
@@ -85,7 +85,7 @@
             console.log("right");
             timer = 0;
         }
-        else if(angle > 100 && angle < 170) {
+        else if(angle > 110 && angle < 160) {
             //DOWN-left SWIPE...
             timerStart = true;
             actions.push("dL");
@@ -99,14 +99,14 @@
             console.log("Up Right");
             timer = 0;
         }
-        else if(angle < -170 && angle > -200) {
-            //left SWIPE...
+        else if(angle < 70 && angle > 20) {
+            //dR SWIPE...
             timerStart = true;
-            actions.push("left");
-            console.log("left");
+            actions.push("dR");
+            console.log("Down Right");
             timer = 0;
         }
-        else if(angle > 80 && angle < 100){
+        else if(angle > 70 && angle < 110){
             //DOWN...
             timerStart = true;
             actions.push("down");
@@ -114,10 +114,10 @@
             timer = 0;
         }
         else {
-            //down-right SWIPE...
+            left
             timerStart = true;
-            actions.push("dR");
-            console.log("Down Right");
+            actions.push("left");
+            console.log("left");
             timer = 0;
         }
         });
