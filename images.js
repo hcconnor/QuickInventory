@@ -1,7 +1,7 @@
 var background = new Image();
 background.width = 900;
 background.height = 1300;
-background.src = 'sprites/BG.png';
+background.src = 'sprites/bg2.png';
 background.X = 0;
 background.Y = 0;
 
