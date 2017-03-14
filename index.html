@@ -1,14 +1,97 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <meta name="viewport" content="user-scalable=no">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" type="text/css" href="text.css">
-        <script src = "hammer-time.min.js"></script>
-        <script src = "hammer.min.js"></script>
-        <script src = "images.js"></script>
-        <script src = "engine.js"> </script>
-    </head>
-    <body>
-        <canvas id="QuickInventory" width="900" height="1300"> </canvas>
+  <meta name="viewport" content="user-scalable=no">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="text.css">
+    <script src="hammer-time.min.js"></script>
+    <script src="hammer.min.js"></script>
+    <script src="images.js"></script>
+    <script src="engine.js"></script>
+    <script src="popup.js"></script>
+
+    <style>
+      /* Popup container - can be anything you want */
+      
+      .popup {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      /* The actual popup */
+      
+      .popup .popupstuff {
+        visibility: hidden;
+        width: 160px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -80px;
+      }
+      /* Popup arrow */
+      
+      .popup .popupstuff::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+      }
+      /* Toggle this class - hide and show the popup */
+      
+      .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+      }
+      /* Add animation (fade in the popup) */
+      
+      @-webkit-keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+
+
+  </head>
+
+  <body>
+
+    <body style="text-align:center">
+
+      <canvas id="QuickInventory" width="900" height="1300"> </canvas>
+      <p>
+
+        <div class="popup" onclick="myFunction()"><b>Need Help? Click Here!</b>
+          <span class="popupstuff" id="myPopup"><img src="http://i.imgur.com/pTolpqE.png"></span>
+        </div>
+
     </body>
+
 </html>
